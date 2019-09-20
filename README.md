@@ -42,7 +42,7 @@ function--is reusable code that can be called anywhere in a program
 
 3. What is closure?
 
-A closure is the combination of a function and the lexical environment in which the function was called
+A closure is the combination of a function and the lexical environment in which the function was called. you can use a variable form the parent function inside any nested function
 
 4. Describe the four rules of the 'this' keyword.
 
