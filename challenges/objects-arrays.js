@@ -51,14 +51,16 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+tyrannosaurus.roar = function () {
+  return 'RAWERSRARARWERSARARARRRR!';
+}
+console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
-const graduates = [
-  {
+const graduates = [{
     id: 1,
     first_name: 'Cynde',
     university: 'Missouri Southern State College',
@@ -91,8 +93,7 @@ const graduates = [
   {
     id: 6,
     first_name: 'Jakob',
-    university:
-      'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
+    university: 'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
     email: 'jharken5@spiegel.de'
   },
   {
@@ -125,6 +126,10 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university);
+}
+console.log(universities.sort());
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -134,18 +139,24 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i = 0; i < graduates.length; i++) {
+  contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email);
+}
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+for (let i = 0; i < graduates.length; i++) {
+  if (graduates[i].university === 'Uni');
+  unisWithUni.push(graduates[i]);
+}
 console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
-const zooAnimals = [
-  {
+const zooAnimals = [{
     animal_name: 'Jackal, asiatic',
     population: 5,
     scientific_name: 'Canis aureus',

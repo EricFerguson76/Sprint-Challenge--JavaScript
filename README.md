@@ -46,12 +46,12 @@ A closure is the combination of a function and the lexical environment in which 
 
 4. Describe the four rules of the 'this' keyword.
 
-   1. window
-   2. implicit binding
-   3. explicit binding
-   4. new binding
+1. Window - functions that are within the global scope.
+1. Implicit Binding - you look to the left of the dot when a function is invoked.
+1. Explicit Binding - we use call, apply or bind to point the JavaScript engine to a certain value.
+1. New Binding - creates a new function that is permanently bound to a "this" element.
 
-5. Why do we need super() in an extended class?
+1. Why do we need super() in an extended class?
 
 it is used to access and call functions of an object's parent.
 
